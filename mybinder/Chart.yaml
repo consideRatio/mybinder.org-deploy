@@ -4,6 +4,13 @@ name: mybinder
 version: 0.0.1-set.by.chartpress
 kubeVersion: ">= 1.15.0-0"
 dependencies:
+  # BinderHub
+  # Source code:    https://github.com/jupyterhub/binderhub/tree/master/helm-chart
+  # App changelog:  https://github.com/jupyterhub/binderhub/blob/master/CHANGES.md
+  - name: binderhub
+    version: 0.2.0-n919.he87e25a
+    repository: https://jupyterhub.github.io/helm-chart
+
   # Ingress-Nginx to route network traffic according to Ingress resources using
   # this controller from within k8s.
   # Source code:   https://github.com/kubernetes/ingress-nginx/tree/master/charts/ingress-nginx
@@ -44,15 +51,8 @@ dependencies:
     repository: https://grafana.github.io/helm-charts
     condition: grafana.enabled
 
-  # BinderHub
-  # Source code:    https://github.com/jupyterhub/binderhub/tree/master/helm-chart
-  # App changelog:  https://github.com/jupyterhub/binderhub/blob/master/CHANGES.md
-  - name: binderhub
-    version: 0.2.0-n919.he87e25a
-    repository: https://jupyterhub.github.io/helm-chart
-
   # cryptnono, counters crypto mining
-  # Source: https://github.com/yuvipanda/cryptnono/
+  # Source code: https://github.com/yuvipanda/cryptnono/
   - name: cryptnono
     version: 0.0.1-n019.h571fa96
     repository: https://yuvipanda.github.io/cryptnono/
