@@ -99,7 +99,7 @@ jobs:
 
 
   update-chart-dependencies:
-    if: github.repository == 'jupyterhub/mybinder.org-deploy'
+    # if: github.repository == 'jupyterhub/mybinder.org-deploy'
     runs-on: ubuntu-20.04
     environment: watch-dependencies-env
 
